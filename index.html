@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZOVO — One World, One Marketplace.">
+  <title>ZOVO — One World, One Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ZOVO home">ZOVO<span>.</span></a>
+    <button class="category-toggle" id="categoryToggle">☰ <span data-en="Categories" data-ur="کیٹیگریز">Categories</span></button>
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Search products, brands and more..." aria-label="Search products">
+      <button aria-label="Search">⌕</button>
+    </form>
+    <nav class="nav">
+      <button class="text-btn" id="languageToggle">اردو</button>
+      <button class="text-btn" id="wishlistButton">♡ <span data-en="Wishlist" data-ur="پسندیدہ">Wishlist</span></button>
+      <button class="text-btn" id="cartButton">♧ <span data-en="Cart" data-ur="کارٹ">Cart</span> <b id="cartCount">0</b></button>
+      <button class="outline-btn" id="loginButton" data-en="Login" data-ur="لاگ اِن">Login</button>
+      <button class="gold-btn" id="signupButton" data-en="Sign Up" data-ur="اکاؤنٹ بنائیں">Sign Up</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-en="THE WORLD'S MARKETPLACE" data-ur="دنیا کی مارکیٹ پلیس">THE WORLD'S MARKETPLACE</p>
+        <h1 data-en="One World,<br>One <em>Marketplace.</em>" data-ur="ایک دنیا،<br>ایک <em>مارکیٹ پلیس۔</em>">One World,<br>One <em>Marketplace.</em></h1>
+        <p class="hero-sub" data-en="Discover products from independent sellers around the world — or open your own shop on ZOVO." data-ur="دنیا بھر کے آزاد فروخت کنندگان سے مصنوعات خریدیں، یا ZOVO پر اپنی دکان کھولیں۔">Discover products from independent sellers around the world — or open your own shop on ZOVO.</p>
+        <div class="hero-actions">
+          <a class="gold-btn big" href="#products" data-en="Explore products" data-ur="مصنوعات دیکھیں">Explore products</a>
+          <button class="outline-btn big" id="sellHero" data-en="Start selling" data-ur="فروخت شروع کریں">Start selling</button>
+        </div>
+        <div class="trust-line"><span class="pulse"></span><span data-en="A marketplace built for independent sellers" data-ur="آزاد فروخت کنندگان کے لیے ایک مارکیٹ پلیس">A marketplace built for independent sellers</span></div>
+      </div>
+      <div class="globe-wrap" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="globe"><div class="globe-grid"></div><div class="globe-shine"></div></div>
+        <div class="floating-tag tag-one">✦ <span data-en="Shop worldwide" data-ur="دنیا بھر میں خریداری">Shop worldwide</span></div>
+        <div class="floating-tag tag-two">↗ <span data-en="Sell your way" data-ur="اپنے انداز میں فروخت کریں">Sell your way</span></div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <article><span class="benefit-icon">◎</span><div><b data-en="Global marketplace" data-ur="عالمی مارکیٹ پلیس">Global marketplace</b><small data-en="Buy and sell across borders" data-ur="سرحدوں کے پار خرید و فروخت">Buy and sell across borders</small></div></article>
+      <article><span class="benefit-icon">⌂</span><div><b data-en="Your own shop" data-ur="آپ کی اپنی دکان">Your own shop</b><small data-en="Every seller gets a storefront" data-ur="ہر فروخت کنندہ کی اپنی دکان">Every seller gets a storefront</small></div></article>
+      <article><span class="benefit-icon">◇</span><div><b data-en="Secure by design" data-ur="محفوظ خریداری">Secure by design</b><small data-en="Safer shopping experience" data-ur="زیادہ محفوظ خریداری کا تجربہ">Safer shopping experience</small></div></article>
+      <article><span class="benefit-icon">%</span><div><b data-en="Simple 5% fee" data-ur="صرف 5% کمیشن">Simple 5% fee</b><small data-en="Planned seller commission" data-ur="فروخت پر مجوزہ کمیشن">Planned seller commission</small></div></article>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR NEXT FAVORITE</p><h2 data-en="Explore categories" data-ur="کیٹیگریز دیکھیں">Explore categories</h2></div><button class="link-btn" id="allCategories" data-en="View all →" data-ur="سب دیکھیں ←">View all →</button></div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card active" data-category="All"><span>✧</span><b data-en="All products" data-ur="تمام مصنوعات">All products</b></button>
+        <button class="category-card" data-category="Electronics"><span>⌁</span><b data-en="Electronics" data-ur="الیکٹرانکس">Electronics</b></button>
+        <button class="category-card" data-category="Fashion"><span>◇</span><b data-en="Fashion" data-ur="فیشن">Fashion</b></button>
+        <button class="category-card" data-category="Home"><span>⌂</span><b data-en="Home & living" data-ur="گھر اور رہائش">Home & living</b></button>
+        <button class="category-card" data-category="Beauty"><span>✿</span><b data-en="Beauty" data-ur="بیوٹی">Beauty</b></button>
+        <button class="category-card" data-category="Sports"><span>↗</span><b data-en="Sports" data-ur="کھیل">Sports</b></button>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading"><div><p class="eyebrow">HANDPICKED FOR YOU</p><h2 data-en="Discover products" data-ur="مصنوعات دریافت کریں">Discover products</h2></div><span class="muted" id="resultCount">6 products</span></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="seller-banner">
+      <div><p class="eyebrow">YOUR BUSINESS, YOUR RULES</p><h2 data-en="Turn your products into<br><em>your next big thing.</em>" data-ur="اپنی مصنوعات کو<br><em>اپنی کامیابی بنائیں۔</em>">Turn your products into<br><em>your next big thing.</em></h2><p data-en="Create your seller profile and reach customers beyond borders." data-ur="اپنا سیلر پروفائل بنائیں اور سرحدوں سے آگے گاہکوں تک پہنچیں۔">Create your seller profile and reach customers beyond borders.</p><button class="gold-btn" id="sellBanner" data-en="Become a seller →" data-ur="سیلر بنیں ←">Become a seller →</button></div>
+      <div class="commission"><strong>5<span>%</span></strong><b data-en="Marketplace commission" data-ur="مارکیٹ پلیس کمیشن">Marketplace commission</b><small data-en="Proposed fee on successful sales" data-ur="کامیاب فروخت پر مجوزہ فیس">Proposed fee on successful sales</small></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#">ZOVO<span>.</span></a><p data-en="One World, One Marketplace." data-ur="ایک دنیا، ایک مارکیٹ پلیس۔">One World, One Marketplace.</p><small>© <span id="year"></span> ZOVO. Demo marketplace concept.</small></footer>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h3 data-en="Your cart" data-ur="آپ کا کارٹ">Your cart</h3><button class="close-btn" id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="muted">Your cart is empty.</p></div>
+    <div class="cart-total"><span data-en="Subtotal" data-ur="کل">Subtotal</span><b id="cartTotal">$0.00</b></div>
+    <button class="gold-btn full" id="checkoutButton" data-en="Continue to checkout" data-ur="چیک آؤٹ جاری رکھیں">Continue to checkout</button>
+    <small class="muted">Demo only — no real payment is processed.</small>
+  </aside>
+
+  <dialog id="sellerDialog" class="modal">
+    <form method="dialog" id="sellerForm">
+      <button class="close-btn modal-close" aria-label="Close">×</button>
+      <p class="eyebrow">JOIN THE MARKETPLACE</p><h2 data-en="Open your ZOVO shop" data-ur="اپنی ZOVO دکان کھولیں">Open your ZOVO shop</h2>
+      <p class="muted" data-en="Start with a seller profile. This demo stores nothing online." data-ur="سیلر پروفائل سے آغاز کریں۔ یہ ڈیمو معلومات آن لائن محفوظ نہیں کرتا۔">Start with a seller profile. This demo stores nothing online.</p>
+      <label>Full name<input required placeholder="Your name"></label>
+      <label>Email address<input type="email" required placeholder="you@example.com"></label>
+      <label>Shop name<input required placeholder="Your shop name"></label>
+      <label>Country<input required placeholder="Country"></label>
+      <button class="gold-btn full" type="submit" id="sellerSubmit">Create demo seller profile</button>
+      <small class="muted">A real marketplace needs secure accounts, database storage and seller verification.</small>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
