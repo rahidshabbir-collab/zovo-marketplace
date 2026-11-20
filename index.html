@@ -85,20 +85,29 @@
     <small class="muted">Demo only — no real payment is processed.</small>
   </aside>
 
-  <dialog id="sellerDialog" class="modal">
-    <form method="dialog" id="sellerForm">
-      <button class="close-btn modal-close" aria-label="Close">×</button>
-      <p class="eyebrow">JOIN THE MARKETPLACE</p><h2 data-en="Open your ZOVO shop" data-ur="اپنی ZOVO دکان کھولیں">Open your ZOVO shop</h2>
-      <p class="muted" data-en="Start with a seller profile. This demo stores nothing online." data-ur="سیلر پروفائل سے آغاز کریں۔ یہ ڈیمو معلومات آن لائن محفوظ نہیں کرتا۔">Start with a seller profile. This demo stores nothing online.</p>
-      <label>Full name<input required placeholder="Your name"></label>
-      <label>Email address<input type="email" required placeholder="you@example.com"></label>
-      <label>Shop name<input required placeholder="Your shop name"></label>
-      <label>Country<input required placeholder="Country"></label>
-      <button class="gold-btn full" type="submit" id="sellerSubmit">Create demo seller profile</button>
-      <small class="muted">A real marketplace needs secure accounts, database storage and seller verification.</small>
+  <dialog id="authDialog" class="modal">
+    <form id="authForm">
+      <button class="close-btn modal-close" type="button" id="closeAuth" aria-label="Close">×</button>
+      <p class="eyebrow">JOIN ZOVO</p>
+      <h2 id="authTitle">Create your account</h2>
+      <p class="muted" id="authIntro">Create a customer or seller account.</p>
+      <label id="nameField">Full name<input id="authName" autocomplete="name" placeholder="Your name"></label>
+      <label>Email address<input id="authEmail" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label>Password<input id="authPassword" type="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></label>
+      <label id="roleField">Account type
+        <select id="authRole">
+          <option value="customer">Customer</option>
+          <option value="seller">Seller</option>
+        </select>
+      </label>
+      <label id="shopField" hidden>Shop name<input id="authShop" placeholder="Your shop name"></label>
+      <button class="gold-btn full" type="submit" id="authSubmit">Create account</button>
+      <button class="link-btn" type="button" id="switchAuth">Already have an account? Log in</button>
+      <small class="muted">Use a strong password. ZOVO will never ask you to share it in chat.</small>
     </form>
   </dialog>
   <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>
 </html>
