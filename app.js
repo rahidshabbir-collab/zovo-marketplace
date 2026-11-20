@@ -73,8 +73,19 @@ $("#authForm").addEventListener("submit",async e=>{
       const role=$("#authRole").value;
       const shopName=$("#authShop").value.trim();
       if(role==="seller"&&!shopName){toast("Please enter your shop name.");return;}
-      const {data,error}=await supabaseClient.auth.signUp({email,password,options:{data:{full_name:fullName,account_type:role,shop_name:role==="seller"?shopName:null}}});
-      if(error)throw error;
+const {data,error}=await supabaseClient.auth.signUp({
+  email,
+  password,
+  options:{
+    emailRedirectTo:"https://rahidshabbir-collab.github.io/zovo-marketplace/",
+    data:{
+      full_name:fullName,
+      account_type:role,
+      shop_name:role==="seller"?shopName:null
+    }
+  }
+});
+if(error)throw error;
       if(data.user && data.session){
         await ensureUserRecords(data.user);
         $("#authDialog").close();$("#authForm").reset();
